@@ -1,0 +1,22 @@
+schema = 1
+
+# The checkout is named doofinder-prestashop, the module doofinder.
+[module]
+name = "doofinder"
+
+[files]
+# Mirrors upstream's export-ignore list in .gitattributes (the rest is
+# already excluded by default).
+exclude = [
+  "/docker-compose.yml",
+  "/composer.json",
+  "/.gitattributes",
+  "/.php-cs-fixer.dist.php",
+  "/templates",
+  "/docker",
+  "/Makefile",
+]
+
+[composer]
+# composer.json only lists development tools (require-dev).
+enabled = false
